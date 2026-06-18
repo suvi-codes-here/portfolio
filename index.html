@@ -417,49 +417,6 @@ body{
 .big-scroll-text .word.lit{opacity:1;color:var(--accent)}
 .big-scroll-text .word.hl{color:var(--gold)}
 
-/* ===== NOW SECTION ===== */
-.now-section{
-  background:var(--card);
-  border-radius:var(--radius);
-  padding:40px 44px;
-  box-shadow:var(--shadow);
-  border:1px solid rgba(212,197,178,.15);
-  position:relative;
-  overflow:hidden;
-  margin:20px 0 10px;
-}
-.now-section::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:4px;
-  background:linear-gradient(90deg,var(--accent),var(--gold),var(--pink));
-  background-size:200% 100%;animation:shimmer 3s linear infinite;
-}
-.now-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-bottom:24px;
-}
-.now-header h2{
-  font-size:clamp(1.6rem,2.5vw,2.2rem);
-  font-weight:700;
-  margin:0;
-}
-.now-timestamp{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  font-size:.85rem;
-  color:var(--text-light);
-  background:rgba(212,182,138,.1);
-  padding:6px 16px;
-  border-radius:100px;
-  border:1px solid rgba(212,182,138,.2);
-}
-.now-timestamp i{
-  color:var(--gold);
-}
 
 
 /* ===== ABOUT ===== */
@@ -835,9 +792,6 @@ footer{
   .t-dot{left:-36px;width:24px;height:24px}
   .hero-image{max-width:280px}
   .contact-grid{grid-template-columns:1fr 1fr}
-  .now-grid{grid-template-columns:1fr}
-  .now-section{padding:28px 20px}
-  .now-header{flex-direction:column;align-items:flex-start}
   footer{flex-direction:column;align-items:center;text-align:center}
 }
 @media(max-width:600px){
@@ -893,7 +847,6 @@ footer{
   <a href="#" class="sidebar-logo">S<span>✦</span></a>
   <nav class="sidebar-nav" id="sideNav">
     <a href="#hero" data-tip="Home" class="active"><i class="fas fa-house"></i></a>
-    <a href="#now" data-tip="Now"><i class="fas fa-clock"></i></a>
     <a href="#about" data-tip="About"><i class="fas fa-user"></i></a>
     <a href="#skills" data-tip="Skills"><i class="fas fa-code"></i></a>
     <a href="#experience" data-tip="Experience"><i class="fas fa-briefcase"></i></a>
@@ -987,7 +940,7 @@ footer{
     <div class="section-eyebrow">🌸 About Me</div>
     <h2>Backend Engineer Focused on <br>Scalable, High-Performance Systems</h2>
      
-        <i><span id="last-updated">Last updated: June 2026</span></i>
+        <i><span id="last-updated">Last updated: BUILD_TIMESTAMP</span></i>
     <div class="section-bar"></div>
     <div class="about-grid">
       <div class="profile-card">
@@ -1236,7 +1189,7 @@ footer{
     <span>© 2026 Suvetha Devi R · crafted with <span class="heart">♥</span></span>
     <span class="footer-timestamp">
       <i class="fas fa-clock"></i>
-     <span id="last-updated">Last updated: June 2026</span>
+     <span id="last-updated">Last updated: BUILD_TIMESTAMP</span>
     </span>
   </footer>
 
